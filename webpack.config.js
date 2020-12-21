@@ -65,7 +65,7 @@ module.exports = {
       },
 
       {
-        test: /\.scss$/,
+        test: /\.(sass|scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -110,9 +110,9 @@ module.exports = {
 
     new CopyPlugin({
       patterns: [
-        { from: "src/img", to: "img" },
-        { from: "./src/favicon.png", to: "favicon.png" },
-        { from: "./src/favicon.svg", to: "favicon.svg" }
+        { from: "src/img", to: "img" }
+        // { from: "./src/favicon.png", to: "favicon.png" },
+        // { from: "./src/favicon.svg", to: "favicon.svg" }
       ]
     }),
 
@@ -140,6 +140,30 @@ module.exports = {
       filename: "index.html", //出力するHTMLのファイル名
       inject: false, //バンドルしたjsファイルを読み込むscriptタグを自動出力しない
       minify: false //minifyしない
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pug/talents/index.pug",
+      filename: "talents/index.html",
+      inject: false,
+      minify: false
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pug/talents/karasu-tatehi.pug",
+      filename: "talents/karasu-tatehi.html",
+      inject: false,
+      minify: false
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pug/talents/yuika-sakura.pug",
+      filename: "talents/yuika-sakura.html",
+      inject: false,
+      minify: false
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pug/guideline.pug",
+      filename: "guideline.html",
+      inject: false,
+      minify: false
     }),
 
     new StyleLintPlugin({
