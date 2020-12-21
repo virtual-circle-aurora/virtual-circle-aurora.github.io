@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
+  ],
+
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+
+  "env": {
+    "browser": true
+  },
+
+  "root": true,
+
+  "rules": {
+    "quotes": ["error", "double"] //クォーテーションがシングルのときエラー
+  }
+}
