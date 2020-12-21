@@ -1,0 +1,20 @@
+extends _base
+block body
+  block mixin
+    mixin section
+      section.section
+        .container
+          if block
+            block
+  header
+    block heroHead
+      include ../includes/_globalNavbar
+  main
+    article
+      block article
+        header.hero.is-dark
+          .hero-body
+            .container
+              h1.block.has-text-centered.has-text-outline
+                p.title.is-1 #{title}
+                p.subtitle #{subtitle}

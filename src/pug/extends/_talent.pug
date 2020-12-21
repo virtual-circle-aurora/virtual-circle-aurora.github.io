@@ -1,0 +1,17 @@
+extends ../extends/_standard
+
+block article
+  header.hero.is-medium.is-dark
+    .hero-body(style=`background-image: url(${heroImg}); background-repeat: no-repeat; background-size: clamp(40%, 400px ,100vw); background-position: right top;`)
+      .container
+        figure.image.is-2by1.is-hidden-tablet
+        h1.content.has-text-outline
+          p.title.is-1 #{title}
+          p.subtitle #{subtitle}
+        nav.buttons
+          if (twitterId)
+            a.button.is-link(href=`//twitter.com/${twitterId}`) Twitter
+          if (youtubeChannel)
+            a.button.is-link(href=`//www.youtube.com/channel/${youtubeChannel}`) YouTube
+          if (twitchId)
+            a.button.is-link(href=`//www.twitch.tv/${twitchId}`) twitch
