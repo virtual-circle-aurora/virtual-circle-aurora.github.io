@@ -1,0 +1,40 @@
+extends ../extends/_talent
+
+block prepend head
+  - const pageName = "桜結花"
+
+block prepend article
+  -
+    let heroImg = "/img/yuika-sakura.png"
+    let title = "桜結花"
+    let subtitle = "Yuika Sakura"
+    let twitterId = "Maua_ya_Cherry"
+    let youtubeChannel = "UCX7ojSN_abTQ0osnPol3ebQ"
+    let twitchId = "sakurayuika"
+
+block append article
+  +section
+    .content.is-medium
+      .columns.is-centered
+        .column.is-4
+          .notification
+            strong 名前
+            p 桜結花
+        .column.is-4
+          .notification
+            strong 誕生日
+            p [非公開]
+        .column.is-4
+          .notification
+            strong 出身
+            p [非公開]
+  +section
+    .content.is-medium
+      h2.title 経歴
+      p ダイパ世代
+  +section
+    .content.is-medium
+      h2.title 人物像
+      p RPGからFPSまでオールジャンルなんでもゲームはプレイします。
+      p 好きなものはゲームと肉肉肉肉肉肉肉肉肉肉肉肉。
+      p 差し入れは肉かゲームがいいな。
