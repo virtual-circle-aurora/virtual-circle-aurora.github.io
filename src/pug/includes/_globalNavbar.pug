@@ -1,0 +1,16 @@
+mixin navbarItem(href, title)
+  a.navbar-item(href=href)
+    strong #{title}
+nav.navbar.is-black
+  .container
+    .navbar-brand
+      .navbar-burger(data-target="js-NavbarMenu")
+        span
+        span
+        span
+    #js-NavbarMenu.navbar-menu.has-text-centered
+      .navbar-end
+        +navbarItem("/", "HOME")
+        +navbarItem("/talents", "TALENTS")
+        +navbarItem("/guideline", "GUIDELINE")
+        +navbarItem("//docs.google.com/forms/d/e/1FAIpQLSdVQwg___3HcX6DlsYxok7kOze8WpIPDqqb0ldNgK8QqPahDw/viewform", "CONTACT")
