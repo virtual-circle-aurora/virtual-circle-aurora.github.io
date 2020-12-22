@@ -3,20 +3,19 @@ $aurora-2: #04B2D9;
 $aurora-3: #02735E;
 $aurora-4: #03A678;
 $aurora-5: #0BD98D;
-$aurora: linear-gradient(to bottom ,$aurora-1, $aurora-2, $aurora-3, $aurora-4, $aurora-5);
-$aurora-light: linear-gradient(to bottom ,findLightColor($aurora-1), findLightColor($aurora-2), findLightColor($aurora-3), findLightColor($aurora-4), findLightColor($aurora-5));
-$aurora-dark: linear-gradient(to bottom ,findDarkColor($aurora-1), findDarkColor($aurora-2), findDarkColor($aurora-3), findDarkColor($aurora-4), findDarkColor($aurora-5));
+$aurora: linear-gradient(to top ,$aurora-1, $aurora-2, $aurora-3, $aurora-4, $aurora-5);
+$aurora-light: linear-gradient(to top ,findLightColor($aurora-1), findLightColor($aurora-2), findLightColor($aurora-3), findLightColor($aurora-4), findLightColor($aurora-5));
+$aurora-dark: linear-gradient(to top ,findDarkColor($aurora-1), findDarkColor($aurora-2), findDarkColor($aurora-3), findDarkColor($aurora-4), findDarkColor($aurora-5));
 
 .hero,
 .navbar,
 .button {
   &.is-aurora {
     background: {
-      image: url("/img/auroraImg.png"),
-        $aurora;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center top;
+      image: url("/img/auroraImg.png"), $aurora;
+      repeat: no-repeat;
+      size: contain;
+      position: center top;
     };
     color: black;
   }
