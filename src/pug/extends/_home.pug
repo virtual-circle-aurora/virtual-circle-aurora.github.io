@@ -12,9 +12,7 @@ block body
           .card-image
             figure.image.is-16by9
               iframe.has-ratio(src=url)
-  block auroraImg
-    - var auroraImg
-  header.hero.is-fullheight.is-aurora(style=`background-image: url("${auroraImg}"); background-repeat: no-repeat; background-size: contain; background-position: center top;`)
+  header.hero.is-fullheight.is-aurora
     .hero-head
       .container
         block auroraHead

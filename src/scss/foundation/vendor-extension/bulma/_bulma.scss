@@ -11,7 +11,13 @@ $aurora-dark: linear-gradient(to bottom ,findDarkColor($aurora-1), findDarkColor
 .navbar,
 .button {
   &.is-aurora {
-    background-image: $aurora;
+    background: {
+      image: url("/img/auroraImg.png"),
+        $aurora;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center top;
+    };
     color: black;
   }
 
