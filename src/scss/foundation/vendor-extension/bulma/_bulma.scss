@@ -1,0 +1,39 @@
+$aurora-1: #011F26;
+$aurora-2: #04B2D9;
+$aurora-3: #02735E;
+$aurora-4: #03A678;
+$aurora-5: #0BD98D;
+$aurora: linear-gradient(to bottom ,$aurora-1, $aurora-2, $aurora-3, $aurora-4, $aurora-5);
+$aurora-light: linear-gradient(to bottom ,findLightColor($aurora-1), findLightColor($aurora-2), findLightColor($aurora-3), findLightColor($aurora-4), findLightColor($aurora-5));
+$aurora-dark: linear-gradient(to bottom ,findDarkColor($aurora-1), findDarkColor($aurora-2), findDarkColor($aurora-3), findDarkColor($aurora-4), findDarkColor($aurora-5));
+
+.hero,
+.navbar,
+.button {
+  .is-aurora {
+    background-color: $aurora;
+    color: black;
+  }
+
+  .is-aurora-light {
+    background-color: $aurora-light;
+    color: black;
+  }
+
+  .is-aurora-dark {
+    background-color: $aurora-dark;
+    color: black;
+  }
+}
+
+.has-text-outline {
+  text-shadow:
+    black  2px  0px, black -2px  0px,
+    black  0px -2px, black  0px  2px,
+    black  2px  2px, black -2px  2px,
+    black  2px -2px, black -2px -2px,
+    black  1px  2px, black -1px  2px,
+    black  1px -2px, black -1px -2px,
+    black  2px  1px, black -2px  1px,
+    black  2px -1px, black -2px -1px;
+}
