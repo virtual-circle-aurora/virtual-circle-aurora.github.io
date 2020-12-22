@@ -17,17 +17,17 @@ $aurora-dark: linear-gradient(to top ,findDarkColor($aurora-1), findDarkColor($a
       size: contain;
       position: center top;
     };
-    color: black;
+    color: white;
   }
 
   &.is-aurora-light {
     background-image: $aurora-light;
-    color: black;
+    color: white;
   }
 
   &.is-aurora-dark {
     background-image: $aurora-dark;
-    color: black;
+    color: white;
   }
 }
 
