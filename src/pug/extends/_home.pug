@@ -4,14 +4,18 @@ block body
     mixin talent(unixName, name, nameEn)
       a.level-item.has-text-centered(href=`/talents/${unixName}`)
         .content.has-text-outline
-          p.title #{name}
-          p.subtitle #{nameEn}
+          p.title.has-text-white #{name}
+          p.subtitle.has-text-white #{nameEn}
     mixin video(url)
       .column.is-4
         .card
           .card-image
             figure.image.is-16by9
               iframe.has-ratio(src=url)
+    mixin notification(classList)
+      .notification.has-text-centered(class=classList)
+        if block
+          block
   header.hero.is-fullheight.is-aurora
     .hero-head
       .container
@@ -25,15 +29,11 @@ block body
             block talents
           .columns.is-centered
             block videos
+          .content
+            block notifications
     .hero-foot
       .container
         block auroraFoot
-          .content
-            block notifications
-              mixin notification(classList)
-                .notification.has-text-centered(class=classList)
-                  if block
-                    block
   main.section
     .container
       block main
