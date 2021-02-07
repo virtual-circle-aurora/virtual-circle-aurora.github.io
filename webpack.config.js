@@ -163,6 +163,12 @@ module.exports = {
       inject: false,
       minify: false
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/pug/contact.pug",
+      filename: "contact.html",
+      inject: false,
+      minify: false
+    }),
 
     new StyleLintPlugin({
       configFile: ".stylelintrc",
