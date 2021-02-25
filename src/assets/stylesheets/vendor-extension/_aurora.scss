@@ -1,0 +1,34 @@
+.hero {
+
+  $aurora-1: #011F26;
+  $aurora-2: #04B2D9;
+  $aurora-3: #02735E;
+  $aurora-4: #03A678;
+  $aurora-5: #0BD98D;
+  $aurora: linear-gradient(to top, $aurora-1, $aurora-2, $aurora-3, $aurora-4, $aurora-5);
+
+  &.is-aurora {
+
+    background: {
+      image: url("/assets/img/aurora.png"), $aurora;
+      position: 50% 50%;
+      repeat: no-repeat;
+      size: contain;
+    };
+    color: #fff;
+
+    .title {
+
+      color: #fff;
+
+    }
+
+    .subtitle {
+
+      color: darken(#fff, 10%);
+
+    }
+
+  }
+
+}

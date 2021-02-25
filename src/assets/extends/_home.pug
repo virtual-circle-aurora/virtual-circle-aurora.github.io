@@ -1,0 +1,49 @@
+extends /assets/extends/_base
+
+block main
+
+  section.hero.is-fullheight-with-navbar.is-aurora
+
+    .hero-body
+
+      .container
+
+        .columns
+
+          mixin talent(unixName, displayName, role)
+
+            .column
+
+              .has-text-centered
+
+                a(href=`/${unixName}`)
+
+                  figure.image.is-3by1
+                    img.has-object-contain(src=`/assets/img/${unixName}.signature.png`, alt=`${displayName}` style="filter: invert();")
+
+                  p.title #{displayName}
+                  p.subtitle #{role}
+
+
+          block newTalents
+
+
+  section.section
+
+    .container
+
+      p.title.has-text-centered ギャラリー
+
+      .columns.is-multiline.is-centered
+
+        mixin gallery(size, unixName, index)
+
+          .column(class=`is-${size}`)
+
+            a.modal-open(data-target="js-Modal")
+
+              figure.image.is-16by9
+                img.modal-thumbnail.has-object-cover(src=`/assets/img/${unixName}.gallery-${index}.png`)
+
+
+        block gallery

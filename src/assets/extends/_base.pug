@@ -1,0 +1,46 @@
+doctype html
+
+html(lang="ja")
+
+  head
+
+    include /assets/includes/_head
+
+
+  body
+
+    include /assets/includes/_siteNavbar
+
+    main
+
+      block main
+
+        article
+
+          header.hero.is-dark
+
+            .hero-body
+
+              .container
+
+                h1.title.has-text-centered #{pageName}
+
+
+          block article
+
+
+          .is-clearfix
+
+
+      #js-Modal.modal
+
+        .modal-background(data-target="js-Modal")
+
+        .modal-content
+
+          img.modal-preview.has-object-contain(src="")
+
+        .modal-close.is-large(aria-label="close" data-target="js-Modal")
+
+
+    include /assets/includes/_siteFooter

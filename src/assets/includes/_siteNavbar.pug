@@ -1,0 +1,25 @@
+nav.navbar.is-primary(role="navigation" aria-label="main navigation")
+
+  .container
+
+    .navbar-brand
+
+      a.navbar-item(href="/")
+
+        img(src="/assets/img/logo-white.png", alt="AURORA")
+
+
+      .navbar-burger(role="button" aria-label="menu" aria-expanded="false" data-target="js-Navbar--Global")
+
+        span(aria-hidden="true")
+        span(aria-hidden="true")
+        span(aria-hidden="true")
+
+
+    #js-Navbar--Global.navbar-menu
+
+      .navbar-end
+
+        a.navbar-item(href="/talents") 所属タレント
+        a.navbar-item(href="/guideline") 二次創作ガイドライン
+        a.navbar-item(href="/contact") お問い合わせ

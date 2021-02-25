@@ -1,0 +1,18 @@
+block head
+
+  - var SITE_NAME = "バーチャルサークル「AURORA」公式サイト"
+
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+  title
+    if (pageName)
+      | #{pageName} | #{SITE_NAME}
+    else
+      | #{SITE_NAME}
+
+  link(rel="stylesheet", href="/assets/stylesheets/vendor.sass")
+  link(rel="stylesheet", href="/assets/stylesheets/vendor-extension.sass")
+
+  script(src="/assets/javascripts/bulma.ts")

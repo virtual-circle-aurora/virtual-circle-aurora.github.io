@@ -1,0 +1,41 @@
+.has-object {
+
+  &-contain {
+
+    object-fit: contain;
+
+  }
+
+  &-cover {
+
+    object-fit: cover;
+
+  }
+
+  &-position {
+
+    @each $namespace, $value in (
+
+      null: 50% 50%,
+      "-tl": 0 0,
+      "-t": 50% 0,
+      "-tr": 100% 0,
+      "-r": 100% 50%,
+      "-br": 100% 100%,
+      "-b": 50% 100%,
+      "-bl": 0 100%,
+      "-l": 0 50%
+
+    ) {
+
+      &#{$namespace} {
+
+        object-position: $value;
+
+      }
+
+    }
+
+  }
+
+}
