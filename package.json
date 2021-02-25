@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "rimraf dist docs",
     "dev": "run-p serve watch",
-    "build": "parcel build src/*.pug --out-dir docs --public-url .　--no-source-maps",
+    "build": "parcel build src/*.pug --out-dir docs --public-url . --no-source-maps",
     "serve": "parcel serve src/index.pug",
     "watch": "parcel watch src/*.pug"
   },
