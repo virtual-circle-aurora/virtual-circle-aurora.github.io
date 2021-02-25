@@ -1,0 +1,40 @@
+extends /assets/extends/_base
+
+block append head
+
+  - var pageName = "所属タレント"
+
+block article
+
+  section.hero.is-halfheight
+
+    .hero-body
+
+      .container
+
+        .columns.is-multiline.is-centered
+
+          .column.is-2
+
+            a(href="/karasu-tatehi")
+
+              .card
+
+                .card-image
+
+                  figure.image.is-1by1
+
+                    img.has-object-cover.has-object-position-t(src=`/assets/img/karasu-tatehi.png`, alt=立飛カラス)
+
+
+          .column.is-2
+
+            a(href="/yuika-sakura")
+
+              .card
+
+                .card-image
+
+                  figure.image.is-1by1
+
+                    img.has-object-cover.has-object-position-t(src=`/assets/img/yuika-sakura.png`, alt=桜結花)
