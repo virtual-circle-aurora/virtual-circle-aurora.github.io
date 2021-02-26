@@ -1,1 +1,46 @@
+extends /assets/extends/_base
 
+block prepend article
+
+  .columns.is-flex-direction-row-reverse
+
+    .column.is-3
+
+      aside
+
+        details.section
+
+          summary インフォボックス
+
+          table.table.is-fullwidth
+
+            include /assets/mixin/_infobox
+
+            thead
+
+              block infoboxHead
+
+
+            tbody
+
+              block infoboxBody
+
+
+            tfoot
+
+              block infoboxFoot
+
+
+    .column.is-6
+
+      .container.is-max-desktop
+
+        mixin content
+
+          section.section
+
+            .content(class!=attributes.class)
+
+              block
+
+        block section
