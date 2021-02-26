@@ -1,0 +1,20 @@
+mixin infoboxHead(title)
+
+  tr
+    th.has-text-centered(colspan="2") #{title}
+
+
+mixin infoboxRow(title)
+
+  tr
+    th #{title}
+    td
+      block
+
+
+mixin infoboxThumbnail(src, alt)
+
+  tr
+    td.has-text-centered(colspan="2")
+      figure.image.is-1by1
+        img.has-object-cover.has-object-position-t(src=`/assets/img/${src}`, alt=`${alt}`)
