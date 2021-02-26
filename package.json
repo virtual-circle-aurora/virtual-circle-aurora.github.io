@@ -8,10 +8,12 @@
   "private": true,
   "scripts": {
     "clean": "rimraf dist docs",
-    "dev": "run-p serve watch",
-    "build": "parcel build src/*.pug --out-dir docs --public-url . --no-source-maps",
-    "serve": "parcel serve src/index.pug",
-    "watch": "parcel watch src/*.pug"
+    "dev": "run-s clean dev:run-p",
+    "dev:parcel-serve": "parcel serve src/index.pug",
+    "dev:parcel-watch": "parcel watch src/*.pug",
+    "dev:run-p": "run-p dev:parcel-*",
+    "build": "run-s clean build:parcel-build",
+    "build:parcel-build": "parcel build src/*.pug --out-dir docs --public-url . --no-source-maps"
   },
   "dependencies": {
     "bulma": "^0.9.2"
