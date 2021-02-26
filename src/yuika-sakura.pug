@@ -4,217 +4,163 @@ block prepend head
 
   - var pageName = "桜結花"
 
-block article
+block infoboxHead
 
-  aside.section.is-pulled-right
+  +infoboxHead("桜結花")
 
-    details
+  +infoboxThumbnail("yuika-sakura.png", "桜結花")
 
-      summary アサイド情報 展開/格納
+block infoboxBody
 
-      table.table
+  +infoboxHead("人物")
 
-        thead
+  +infoboxRow("生誕")
+    | 非公開
 
-          tr
-            th.has-text-centered(colspan="2") #{pageName}
+  +infoboxRow("職業")
+    | バーチャル女子大学生
 
-
-        tbody
-
-          tr
-            td.has-text-centered(colspan="2")
-              figure.image.is-1by1
-                img.has-object-cover.has-object-position-t(src=`/assets/img/yuika-sakura.png`, alt=`${pageName}`)
+  +infoboxRow("サイン")
+    figure.image.is-3by1
+      img.has-object-contain.has-object-position(src="/assets/img/yuika-sakura.signature.png", alt="桜結花のサイン")
 
 
-          tr
-            th.has-text-centered(colspan="2") 人物
+  +infoboxHead("活動")
 
-          tr
-            th 生誕
-            td 非公開
+  +infoboxRow("YouTube")
+    a(href="//www.youtube.com/channel/UCX7ojSN_abTQ0osnPol3ebQ" target="_blank" rel="noopener noreferrer") 桜 結花 / Sakura Yuika
 
-          tr
-            th 職業
-            td
-              | バーチャル女子大学生
+  +infoboxRow("Twitch")
+    a(href="//www.twitch.tv/sakurayuika" target="_blank" rel="noopener noreferrer") 桜結花
 
-          tr
-            th サイン
-            td
-              figure.image.is-2by1
-                img.has-object-contain(src="/assets/img/yuika-sakura.signature.png", alt=`${pageName}`)
+  +infoboxRow("Twitter")
+    a(href="//twitter.com/Maua_ya_Cherry" target="_blank" rel="noopener noreferrer") @Maua_ya_Cherry
 
+  +infoboxRow("期間")
+    | 2020年 -
 
-          tr
-            th.has-text-centered(colspan="2") 活動
+  +infoboxRow("期間")
+    a(href="//twitter.com/temihamu" target="_blank" rel="noopener noreferrer") @anew_ryo
+    br
+    | （キャラクターデザイン）
+    br
+    a(href="//twitter.com/rrr_snnm" target="_blank" rel="noopener noreferrer") @rrr_snnm
+    br
+    | （Live2D）
+    br
+    a(href="//twitter.com/Maua_ya_Cherry" target="_blank" rel="noopener noreferrer") @Maua_ya_Cherry
+    br
+    | 3D
 
-          tr
-            th YouTube
-            td
-              a(href="//www.youtube.com/channel/UCX7ojSN_abTQ0osnPol3ebQ" target="_blank" rel="noopener noreferrer") 桜 結花 / Sakura Yuika
+  +infoboxRow("ジャンル")
+    | ゲーム実況
+    br
+    | 雑談
 
-          tr
-            th Twitch
-            td
-              a(href="//www.twitch.tv/sakurayuika" target="_blank" rel="noopener noreferrer") 桜結花
-
-          tr
-            th Twitter
-            td
-              a(href="//twitter.com/Maua_ya_Cherry" target="_blank" rel="noopener noreferrer") @Maua_ya_Cherry
-
-          tr
-            th 作者
-            td
-              a(href="//twitter.com/temihamu" target="_blank" rel="noopener noreferrer") @anew_ryo
-              br
-              | （キャラクターデザイン）
-              br
-              a(href="//twitter.com/rrr_snnm" target="_blank" rel="noopener noreferrer") @rrr_snnm
-              br
-              | （Live2D）
-              br
-              a(href="//twitter.com/Maua_ya_Cherry" target="_blank" rel="noopener noreferrer") @Maua_ya_Cherry
-              br
-              | 3D
-
-          tr
-            th 期間
-            td 2020年 -
-
-          tr
-            th ジャンル
-            td
-              | ゲーム実況
-              br
-              | 雑談
-
-          tr
-            th 事務所（MCN）
-            td
-              | AURORA
+  +infoboxRow("事務所（MCN）")
+    | AURORA
 
 
-  section.section
+block section
 
-    .container.is-max-desktop
+  +content()
 
-      .content
+    h2 経歴
 
-        h2 経歴
-
-        p ダイパ世代
+    p ダイパ世代
 
 
-  section.section
+  +content()
 
-    .container.is-max-desktop
+    h2 人物像
 
-      .content
+    p RPGからFPSまでオールジャンルなんでもゲームはプレイします。
 
-        h2 人物像
+    p 好きなものはゲームと肉肉肉肉肉肉肉肉肉肉肉肉。
 
-        p RPGからFPSまでオールジャンルなんでもゲームはプレイします。
-
-        p 好きなものはゲームと肉肉肉肉肉肉肉肉肉肉肉肉。
-
-        p 差し入れは肉かゲームがいいな。
+    p 差し入れは肉かゲームがいいな。
 
 
-  section.section
+  +content()
 
-    .container.is-max-desktop
+    h2 二次創作ガイドライン
 
-      .content
+    .content.is-small
 
-        h2 二次創作ガイドライン
-
-
-      .content.is-small
-
-        .notification.is-info
-
-          p
-            strong 独自に適用される二次創作ガイドラインについて取り扱っています。
-
-          p
-            | 本ガイドラインは、本タレントが公開するコンテンツに対してのみ適用されます。
-            br
-            | バーチャルサークル「AURORA」および所属タレントが公開する全てのコンテンツに対して適用されている二次創作ガイドラインについては、
-            a(href="/guideline") こちら
-            | をご確認ください。
-
-
-      .content
+      .notification.is-info
 
         p
-          | 「桜結花」の配信動画やその他コンテンツについて、視聴者の皆様が個人で利用する目的で保存を行うことは各コンテンツ規約の範囲内であれば制限する事はありません。
+          strong 独自に適用される二次創作ガイドラインについて取り扱っています。
+
+        p
+          | 本ガイドラインは、本タレントが公開するコンテンツに対してのみ適用されます。
           br
-          | また、「桜 結花」の動画の一部を切り抜き、SNS等に掲載する行為についても同様に否定しませんが、この時元となった動画のリンク等を記載していただければと思います。
+          | バーチャルサークル「AURORA」および所属タレントが公開する全てのコンテンツに対して適用されている二次創作ガイドラインについては、
+          a(href="/guideline") こちら
+          | をご確認ください。
 
-        p
-          | ただし誤解を招く動画の切り抜き行為、特に悪意を持ったものや作為的に異なる解釈を与えるような部分的な切り取り行為につきましては「やって欲しくない」行動として禁止させて頂きます。
+    p
+      | 「桜結花」の配信動画やその他コンテンツについて、視聴者の皆様が個人で利用する目的で保存を行うことは各コンテンツ規約の範囲内であれば制限する事はありません。
+      br
+      | また、「桜 結花」の動画の一部を切り抜き、SNS等に掲載する行為についても同様に否定しませんが、この時元となった動画のリンク等を記載していただければと思います。
 
-        p
-          | 「桜結花」を用いたファンアート、二次創作、その他の行為の掲載について私達運営が大きく制限する事項はありません。しかしながら過度に性的な作品につきましては許容範囲外として制限させていただきます。あくまでもモラルを持った行動をお願いします。
+    p
+      | ただし誤解を招く動画の切り抜き行為、特に悪意を持ったものや作為的に異なる解釈を与えるような部分的な切り取り行為につきましては「やって欲しくない」行動として禁止させて頂きます。
 
-        blockquote
+    p
+      | 「桜結花」を用いたファンアート、二次創作、その他の行為の掲載について私達運営が大きく制限する事項はありません。しかしながら過度に性的な作品につきましては許容範囲外として制限させていただきます。あくまでもモラルを持った行動をお願いします。
 
-          p
-            strong 制限される例
+    blockquote
 
-          ul
+      p
+        strong 制限される例
 
-            li 画像掲載サイトにおいてR-18タグの付与が求められるもの
+      ul
 
-        p
-          | 何かご不明な点や、解釈上の疑問がございましたら先ず運営にご相談ください。
+        li 画像掲載サイトにおいてR-18タグの付与が求められるもの
+
+    p
+      | 何かご不明な点や、解釈上の疑問がございましたら先ず運営にご相談ください。
 
 
-  section.section
+  +content()
 
-    .container.is-max-desktop
+    h2 クレジット
 
-      .content
+    .columns.is-centered
 
-        h2 クレジット
+      .column
 
-        .columns.is-centered
+        h3 アートワーク
 
-          .column
+        dl
 
-            h3 アートワーク
+          dt
+            strong キャラクターデザイン
+          dd
+            a(href="//twitter.com/anew_ryo" target="_blank" rel="noopener noreferrer") @anew_ryo
 
-            dl
+          dt
+            strong Live2D
+          dd
+            a(href="//twitter.com/rrr_snnm" target="_blank" rel="noopener noreferrer") @rrr_snnm
 
-              dt
-                strong キャラクターデザイン
-              dd
-                a(href="//twitter.com/anew_ryo" target="_blank" rel="noopener noreferrer") @anew_ryo
+          dt
+            strong 3D
+          dd
+            a(href="//twitter.com/Maua_ya_Cherry" target="_blank" rel="noopener noreferrer") @Maua_ya_Cherry
 
-              dt
-                strong Live2D
-              dd
-                a(href="//twitter.com/rrr_snnm" target="_blank" rel="noopener noreferrer") @rrr_snnm
+          dt
+            strong アバター
+          dd
+            a(href="//twitter.com/anew_ryo" target="_blank" rel="noopener noreferrer") @anew_ryo
 
-              dt
-                strong 3D
-              dd
-                a(href="//twitter.com/Maua_ya_Cherry" target="_blank" rel="noopener noreferrer") @Maua_ya_Cherry
+          dt
+            strong サイン
+          dd
+            a(href="//twitter.com/shuto_minaduki") @shuto_minaduki
 
-              dt
-                strong アバター
-              dd
-                a(href="//twitter.com/anew_ryo" target="_blank" rel="noopener noreferrer") @anew_ryo
-
-              dt
-                strong サイン
-              dd
-                a(href="//twitter.com/shuto_minaduki") @shuto_minaduki
-
-              dt
-                strong バイオグラフィ
-              dd
-                a(href="//twitter.com/Maua_ya_Cherry" target="_blank" rel="noopener noreferrer") @Maua_ya_Cherry
+          dt
+            strong バイオグラフィ
+          dd
+            a(href="//twitter.com/Maua_ya_Cherry" target="_blank" rel="noopener noreferrer") @Maua_ya_Cherry
