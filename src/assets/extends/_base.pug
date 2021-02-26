@@ -11,36 +11,46 @@ html(lang="ja")
 
     include /assets/includes/_siteNavbar
 
-    main
+    block header
+
+      header.hero.is-dark
+
+        .hero-body
+
+          .container
+
+            h1.title.has-text-centered #{pageName}
+
+
+    main.section
 
       block main
 
-        article
+        .columns.is-flex-direction-row-reverse
 
-          header.hero.is-dark
+          block aside
 
-            .hero-body
-
-              .container
-
-                h1.title.has-text-centered #{pageName}
-
+            // aside.column.is-4-tablet.is-3-widescreen
 
           block article
 
+            article.column
 
-          .is-clearfix
+              .container
 
+                block section
 
-      #js-Modal.modal
-
-        .modal-background(data-target="js-Modal")
-
-        .modal-content
-
-          img.modal-preview.has-object-contain(src="")
-
-        .modal-close.is-large(aria-label="close" data-target="js-Modal")
+            // article.column.is-8-tablet.is-6-widescreen
 
 
     include /assets/includes/_siteFooter
+
+    #js-Modal.modal
+
+      .modal-background(data-target="js-Modal")
+
+      .modal-content
+
+        img.modal-preview.has-object-contain(src="")
+
+      .modal-close.is-large(aria-label="close" data-target="js-Modal")

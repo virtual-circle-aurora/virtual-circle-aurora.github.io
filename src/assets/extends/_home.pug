@@ -1,8 +1,8 @@
 extends /assets/extends/_base
 
-block main
+block header
 
-  section.hero.is-fullheight-with-navbar.is-aurora
+  header.hero.is-fullheight-with-navbar.is-aurora
 
     .hero-body
 
@@ -28,7 +28,9 @@ block main
           block newTalents
 
 
-  section.section
+block main
+
+  section.block
 
     .container
 
@@ -36,14 +38,14 @@ block main
 
       .columns.is-multiline.is-centered
 
-        mixin gallery(size, unixName, index)
+        mixin gallery(size, position, unixName, index)
 
           .column(class=`is-${size}`)
 
             a.modal-open(data-target="js-Modal")
 
               figure.image.is-16by9
-                img.modal-thumbnail.has-object-cover(src=`/assets/img/${unixName}.gallery-${index}.png`)
+                img.modal-thumbnail.has-object-cover(class=`has-object-position${position}` src=`/assets/img/${unixName}.gallery-${index}.png`)
 
 
         block gallery
