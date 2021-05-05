@@ -1,34 +1,21 @@
 {
   "name": "virtual-circle-aurora.github.io",
   "version": "0.0.0",
-  "main": "index.js",
   "repository": "https://github.com/virtual-circle-aurora/virtual-circle-aurora.github.io.git",
   "author": "KarasuTatehi <45784893+KarasuTatehi@users.noreply.github.com>",
   "license": "UNLICENCED",
   "private": true,
   "scripts": {
-    "clean": "rimraf dist docs",
-    "dev": "run-s clean dev:run-p",
-    "dev:parcel-serve": "parcel serve src/index.pug",
-    "dev:parcel-watch": "parcel watch src/*.pug",
-    "dev:run-p": "run-p dev:parcel-*",
-    "build": "run-s clean build:parcel-build",
-    "build:parcel-build": "parcel build src/*.pug --out-dir docs --public-url . --no-source-maps",
-    "v-fix": "npx npm-force-resolutions"
+    "serve": "rimraf dist && parcel serve src/index.pug",
+    "build": "rimraf docs && parcel build src/index.pug --dist-dir docs --no-source-maps",
+    "watch": "rimraf docs && parcel build src/index.pug --dist-dir docs --no-source-maps"
   },
-  "dependencies": {
-    "bulma": "^0.9.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "npm-run-all": "^4.1.5",
-    "parcel": "^1.12.4",
-    "parcel-plugin-imagemin": "^4.0.2",
-    "pug": "^3.0.1",
-    "rimraf": "^3.0.2",
-    "sass": "^1.32.8",
-    "typescript": "^4.2.2"
-  },
-  "resolutions": {
-    "node-forge": "^0.10.0"
+    "@parcel/transformer-pug": "2.0.0-beta.2",
+    "@parcel/transformer-sass": "2.0.0-beta.2",
+    "bulma": "^0.9.2",
+    "parcel": "^2.0.0-beta.2",
+    "rimraf": "^3.0.2"
   }
 }
