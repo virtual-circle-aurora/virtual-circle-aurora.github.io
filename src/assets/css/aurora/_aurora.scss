@@ -10,7 +10,7 @@
   &.is-aurora {
 
     background: {
-      image: url("/assets/img/aurora.png"), $aurora;
+      image: url("../../img/aurora.png"), $aurora;
       position: 50% 50%;
       repeat: no-repeat;
       size: contain;

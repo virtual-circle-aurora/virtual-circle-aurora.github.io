@@ -1,4 +1,4 @@
-extends /assets/extends/_talent
+extends ../assets/extends/_talent
 
 block prepend head
 
@@ -30,7 +30,7 @@ block infoboxBody
 
   +infoboxRow("サイン")
     figure.image.is-3by1
-      img.has-object-contain.has-object-position(src="/assets/img/karasu-tatehi.signature.png", alt="立飛カラスの花押")
+      img.has-object-contain.has-object-position(src="/src/assets/img/karasu-tatehi.signature.png", alt="立飛カラスの花押")
 
 
   +infoboxHead("活動")
@@ -133,7 +133,7 @@ block section
           | 本ガイドラインは、本タレントが公開するコンテンツに対してのみ適用されます。
           br
           | バーチャルサークル「AURORA」および所属タレントが公開する全てのコンテンツに対して適用されている二次創作ガイドラインについては、
-          a(href="/guideline") こちら
+          a(href="/src/guideline.pug") こちら
           | をご確認ください。
 
     p

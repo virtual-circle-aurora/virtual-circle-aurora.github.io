@@ -1,4 +1,4 @@
-extends /assets/extends/_base
+extends ./_base.pug
 
 block header
 
@@ -16,10 +16,10 @@ block header
 
               .has-text-centered
 
-                a(href=`/${unixName}`)
+                a(href=`/src/talents/${unixName}.pug`)
 
                   figure.image.is-3by1
-                    img.has-object-contain(src=`/assets/img/${unixName}.signature.png`, alt=`${displayName}` style="filter: invert();")
+                    img.has-object-contain(src=`/src/assets/img/${unixName}.signature.png`, alt=`${displayName}` style="filter: invert();")
 
                   p.title #{displayName}
                   p.subtitle #{role}
@@ -45,7 +45,7 @@ block main
             a.modal-open(data-target="js-Modal")
 
               figure.image.is-16by9
-                img.modal-thumbnail.has-object-cover(class=`has-object-position${position}` src=`/assets/img/${unixName}.gallery-${index}.png`)
+                img.modal-thumbnail.has-object-cover(class=`has-object-position${position}` src=`/src/assets/img/${unixName}.gallery-${index}.png`)
 
 
         block gallery
